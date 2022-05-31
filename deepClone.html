@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let source = {
+            str:"text",
+            num: 10,
+            flag: true,
+            arr: [1,2,3],
+            date: new Date(2020,10,20),
+            obh: {a: 9, b:"txt"}
+        };
+        var resoult = deepCopy(source);
+
+
+        function deepCopy(obj) {
+            if (obj instanceof Object) {
+                for ( key in Object ) {
+                    console.log(key + " " + obj[key] )
+                    copy[key] = obj[key]
+                }
+
+            }
+            
+        }
+        console.log(resoult)
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var data = 10
+        console.log(data)
+        function search(arr, x)
+{
+    let i = 0;
+    let count = arr.length;
+    while (i < count)
+    {
+        if (arr[i] == x)
+            return i;
+        i++;
+    }
+    return null;
+}
+
+let items = [ 2, 3, 5, 7, 11, 13, 17 ];
+
+console.log(search(items, 1));
+//print null
+console.log(search(items, 7));
+//print 3
+console.log(search(items, 19));
+//print null
+
+// *** simplified speed test ***
+
+let i = 0;
+items = Array
+    .apply(null, Array(10000))
+    .map(() => ++i );
+let count = 10000;
+
+let start = new Date();
+
+for (i = 0; i < count; i++)
+    search(items, 7777);
+
+let milliseconds = (new Date()) - start;
+
+console.log(milliseconds);
+// about 142 milliseconds
+
+        let value = 10
+
+        value = "test"
+
+        console.log(value)
+    </script>
+</body>
+</html>
